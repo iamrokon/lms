@@ -11,6 +11,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "laraveldaily/laravel-invoices": "3.0",
         "livewire/livewire": "^2.11",
         "php-flasher/flasher-laravel": "^1.13",
         "spatie/laravel-permission": "^5.8"

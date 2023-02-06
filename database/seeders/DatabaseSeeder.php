@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        $defaultPermissions = ['lead-management', 'create-admin'];
+        $defaultPermissions = ['lead-management', 'create-admin', 'user-management'];
         foreach($defaultPermissions as $permission){
             Permission::create([
                 'name'=>$permission
@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             'description' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugiat quas aliquid numquam a, blanditiis optio exercitationem fuga facere ullam recusandae.',
             'image' =>'https://res.cloudinary.com/practicaldev/image/fetch/s--nWYze10a--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qtwqedl51vqx5zkxa65d.png',
             'user_id' => $teacher->id,
+            'price' => 500,
         ]);
         Curriculam::factory()->count(10)->create();
     }

@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admission')" :active="request()->routeIs('admission')">
+                        {{ __('Admission') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('invoices')" :active="request()->routeIs('invoices')">
+                        {{ __('Invoices') }}
+                    </x-nav-link>
                     @can('lead-management')
                         <x-nav-link :href="route('lead.index')" :active="request()->routeIs('lead.index')">
                             {{ __('Leads') }}
@@ -39,6 +45,11 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        @can('user-management')
+                        <x-dropdown-link :href="route('user.index')">
+                            {{ __('Users') }}
+                        </x-dropdown-link>
+                        @endcan
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
