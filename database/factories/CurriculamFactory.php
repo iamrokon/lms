@@ -14,7 +14,10 @@ class CurriculamFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->paragraph,
+            'name' => $this->faker->sentence,
+            'week_day' => 'sunday',
+            'class_time' => $this->faker->time,
+            'end_date' => $this->faker->date,
             'course_id' => 1,
         ];
     }

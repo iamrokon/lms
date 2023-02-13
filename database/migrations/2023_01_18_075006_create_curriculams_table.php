@@ -16,6 +16,9 @@ class CreateCurriculamsTable extends Migration
         Schema::create('curriculams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('week_day');
+            $table->time('class_time');
+            $table->date('end_date');
             $table->unsignedBigInteger('course_id');
             $table->timestamps();
 

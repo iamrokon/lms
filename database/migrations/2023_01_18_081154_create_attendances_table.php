@@ -19,6 +19,8 @@ class CreateAttendancesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
+            $table->unique(['curriculam_id', 'user_id']);
+
             $table->foreign('curriculam_id')->references('id')->on('curriculams')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

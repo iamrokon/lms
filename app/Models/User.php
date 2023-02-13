@@ -59,4 +59,8 @@ class User extends Authenticatable
     // public function homeworks(){
     //     return $this->hasMany(Homework::class);
     // }
+
+    public function is_present($curriculam_id) {
+        return Attendance::where('user_id', $this->id)->where('curriculam_id', $curriculam_id)->exists();
+    }
 }

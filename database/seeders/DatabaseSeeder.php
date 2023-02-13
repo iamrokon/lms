@@ -33,7 +33,8 @@ class DatabaseSeeder extends Seeder
 
         Lead::factory()->count(100)->create();
         Course::create([
-            'name' =>'Laravel',
+            'name' => 'Laravel',
+            'slug' => 'laravel',
             'description' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugiat quas aliquid numquam a, blanditiis optio exercitationem fuga facere ullam recusandae.',
             'image' =>'https://res.cloudinary.com/practicaldev/image/fetch/s--nWYze10a--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qtwqedl51vqx5zkxa65d.png',
             'user_id' => $teacher->id,
