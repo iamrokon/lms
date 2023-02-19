@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Invoice;
 use App\Models\InvoiceItem;
 use App\Models\Payment;
+use Illuminate\Support\Str;
 
 class Admission extends Component
 {
@@ -60,6 +61,7 @@ class Admission extends Component
             Payment::create([
                 'amount' => $this->payment,
                 'invoice_id' => $invoice->id,
+                'transaction_id' => Str::random(8),
             ]);
         }
 
